@@ -2,8 +2,23 @@ import "@arcgis/core/assets/esri/themes/light/main.css";
 import WebMap from "@arcgis/core/WebMap";
 import MapView from "@arcgis/core/views/MapView";
 import LayerList from "@arcgis/core/widgets/LayerList";
+import Legend from "@arcgis/core/widgets/Legend";
 
 export function loadMap(containerId: string) {
+    const container = document.getElementById(containerId)!;
+    
+    // Show loading indicator
+    container.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: hsl(0 0% 10%);">
+            <div style="text-align: center; color: hsl(200 100% 60%);">
+                <div class="spinner-border" role="status" style="width: 2.5rem; height: 2.5rem; border-width: 0.25em;">
+                    <span class="visually-hidden">Načítání mapy...</span>
+                </div>
+                <p style="margin-top: 0.75rem; font-size: 0.95rem; opacity: 0.8;">Načítání mapy...</p>
+            </div>
+        </div>
+    `;
+    
     const webmap = new WebMap({
         portalItem: {
             id: "59bc4eb4eaee4fc48931611029997ff9"
@@ -15,10 +30,19 @@ export function loadMap(containerId: string) {
         container: containerId
     });
 
+    const legend = new Legend({
+        view: view
+    });
 
     const layerList = new LayerList({
         view: view
     });
 
+    view.ui.add(legend, "bottom-right");
     view.ui.add(layerList, "top-right");
+    
+    // Remove loading indicator when map is ready
+    view.when(() => {
+        container.querySelector('.spinner-border')?.parentElement?.parentElement?.remove();
+    });
 }

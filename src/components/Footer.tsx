@@ -1,9 +1,9 @@
 export function Footer() {
     return (
-        <footer className="border-t bg-card px-6 py-4">
-            <div className="flex items-center justify-between text-sm text-muted-foreground">
-                <p>© 2025 Univerzita J. E. Purkyně v Ústí nad Labem</p>
-                <div className="flex gap-4">
+        <footer className="border-t bg-card px-4 py-2">
+            <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <p>© 2025 UJEP</p>
+                <div className="flex gap-3">
                     <a href="#/o-projektu" className="hover:text-foreground transition-colors">
                         O projektu
                     </a>

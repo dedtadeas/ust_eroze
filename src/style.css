@@ -11,32 +11,32 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  /* Gray scale with neon accents */
+  /* Subtle dark theme with vibrant accent */
   --radius: 0.5rem;
   --background: 0 0% 10%;
-  --foreground: 0 0% 95%;
-  --card: 0 0% 12%;
-  --card-foreground: 0 0% 95%;
+  --foreground: 0 0% 90%;
+  --card: 0 0% 13%;
+  --card-foreground: 0 0% 90%;
   --popover: 0 0% 15%;
-  --popover-foreground: 0 0% 95%;
-  --primary: 165 100% 50%;  /* Neon cyan */
-  --primary-foreground: 0 0% 10%;
-  --secondary: 310 100% 50%;  /* Neon magenta */
-  --secondary-foreground: 0 0% 95%;
+  --popover-foreground: 0 0% 90%;
+  --primary: 200 100% 60%;  /* Vibrant blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 25%;  /* Subtle gray */
+  --secondary-foreground: 0 0% 90%;
   --muted: 0 0% 20%;
-  --muted-foreground: 0 0% 60%;
+  --muted-foreground: 0 0% 55%;
   --accent: 0 0% 18%;
-  --accent-foreground: 0 0% 95%;
+  --accent-foreground: 0 0% 90%;
   --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 95%;
-  --border: 0 0% 20%;
-  --input: 0 0% 20%;
-  --ring: 165 100% 50%;
-  --chart-1: 165 100% 50%;
-  --chart-2: 310 100% 50%;
-  --chart-3: 0 0% 60%;
-  --chart-4: 0 0% 40%;
-  --chart-5: 0 0% 30%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 22%;
+  --input: 0 0% 22%;
+  --ring: 200 100% 60%;
+  --chart-1: 200 100% 60%;
+  --chart-2: 0 0% 40%;
+  --chart-3: 0 0% 50%;
+  --chart-4: 0 0% 35%;
+  --chart-5: 0 0% 28%;
 }
 
 html, body {
