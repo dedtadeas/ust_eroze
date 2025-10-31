@@ -13,7 +13,7 @@ const root = createRoot(document.getElementById("app")!);
 root.render(
   <>
     <Header />
-    <div id="content"></div>
+    <div id="content" style={{ display: 'flex' }}></div>
     <div id="viewDiv" style={{ display: 'none' }}></div>
     <Footer />
   </>
