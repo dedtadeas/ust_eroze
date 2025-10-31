@@ -7,7 +7,7 @@ export function loadMap(containerId: string) {
     
     // Show loading indicator
     container.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: hsl(0 0% 10%);">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; background: hsl(0 0% 10%);">
             <div style="text-align: center; color: hsl(200 100% 60%);">
                 <div class="spinner-border" role="status" style="width: 2.5rem; height: 2.5rem; border-width: 0.25em;">
                     <span class="visually-hidden">Načítání mapy...</span>
