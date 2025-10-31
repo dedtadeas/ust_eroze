@@ -1,0 +1,1 @@
+import{pd as e}from"./index-BqmCqmfp.js";function t(e){return e?.name??`default`}export{t};

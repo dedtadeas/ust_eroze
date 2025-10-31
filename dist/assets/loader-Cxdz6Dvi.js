@@ -1,0 +1,1 @@
+import"./quatf64-CJzmL3cc.js";import"./quat-Bk_ZaVz9.js";import"./BufferView-DNaZpbJX.js";import"./Util-3rPi0NfK.js";import"./resourceUtils-jv0JPTgA.js";import{t as e}from"./loader-CUuHR4Qs.js";export{e as loadGLTF};

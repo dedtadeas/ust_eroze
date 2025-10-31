@@ -1,0 +1,1 @@
+import{vx as e}from"./index-BqmCqmfp.js";function t(t,n){return t===null?n:new e({url:t.field(`url`)})}export{t};

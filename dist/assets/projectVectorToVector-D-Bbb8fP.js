@@ -1,0 +1,1 @@
+import{Ux as e}from"./index-BqmCqmfp.js";import{n as t}from"./projectPointToVector-Clou1sfo.js";import{n}from"./dehydratedPoint-Dwb3orme.js";function r(e,n,r,a,o){return!(n==null||a==null||e.length<2)&&(i.x=e[0],i.y=e[1],i.z=e[2],i.spatialReference=n,t(i,r,a,o))}var i=n(0,0,0,e.WGS84);export{r as t};

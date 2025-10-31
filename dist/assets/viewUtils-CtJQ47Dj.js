@@ -1,0 +1,1 @@
+import{Jg as e,ru as t,tg as n}from"./index-BqmCqmfp.js";import{c as r}from"./elevationInfoUtils-Df_uYU_q.js";function i(n,i,o,s,c=e()){let l=t(a,n);return l[2]=r(s,l,i,o)||0,s.renderCoordsHelper.toRenderCoords(l,i,c),c}var a=e();n(),n();export{i as t};

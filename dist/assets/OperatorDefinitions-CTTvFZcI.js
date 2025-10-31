@@ -1,0 +1,1 @@
+import{t as e}from"./OperatorDefinitions-DQQu7-BK.js";export{e as NonSimpleResult};

@@ -1,0 +1,1 @@
+import{IS as e,kg as t}from"./index-BqmCqmfp.js";import{n}from"./MeshLocalVertexSpace-HjmVAuYa.js";import{r}from"./vertexSpaceConversion-g9XG_RJW.js";function i(i,a){let o=r(i,n.absolute);if(!o)return null;let s=o.position;return e(i.spatialReference,a)||(s=new Float64Array(o.position.length),t(o.position,i.spatialReference,0,s,a,0))?s:null}export{i as t};

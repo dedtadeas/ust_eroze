@@ -1,0 +1,1 @@
+import{t as e}from"./SimpleGeometryCursor-CI9GIWKa.js";import{s as t}from"./UnitFactory-J9WMNXdY.js";var n=new t;function r(e,t,r){return n.execute(e,t,r,null)}function i(t,r,i){let a=n.executeMany(new e(t),r,i,null);return Array.from(a)}function a(e,t,r){return n.isSimpleAsFeature(e,t,r,null,null)}function o(){return n.supportsCurves()}export{i,a as n,o as r,r as t};

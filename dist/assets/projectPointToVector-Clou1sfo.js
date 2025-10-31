@@ -1,0 +1,1 @@
+import{Jg as e,gg as t,kg as n,lg as r,pg as i}from"./index-BqmCqmfp.js";function a(e,t,a,o){if(i(e.spatialReference,a))return s[0]=e.x,s[1]=e.y,s[2]=e.z??o??0,n(s,e.spatialReference,0,t,a,0);let c=r(e,a);return!!c&&(t[0]=c?.x,t[1]=c?.y,t[2]=c?.z??o??0,!0)}async function o(e,n,r,i,o){return await t(e.spatialReference,r,null,o),a(e,n,r,i)}var s=e();export{a as n,o as t};

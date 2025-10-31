@@ -1,0 +1,1 @@
+import{Sw as e}from"./index-BqmCqmfp.js";async function t(t,n){let{data:r}=await e(t,{responseType:`image`,...n});return r}export{t};
