@@ -2,9 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import { createRoot } from "react-dom/client";
 import { useEffect } from "react";
+import type { ReactElement } from "react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
+import { Team } from "./pages/Team";
 import { loadMap as loadVod } from "./pages/vodniEroze";
 import { loadMap as loadTan } from "./pages/erozeTaniSnehu";
 import { loadMap as loadVet } from "./pages/vetrnaEroze";
@@ -28,6 +30,7 @@ const routes: Record<string, () => void> = {
     }
     contentRoot.render(<Home />);
   },
+  "#/resitelsky-tym": () => showPage(Team),
   "#/mapy/vodni-eroze": () => showMap(() => loadVod("viewDiv")),
   "#/mapy/eroze-tani-snehu": () => showMap(() => loadTan("viewDiv")),
   "#/mapy/vetrna-eroze": () => showMap(() => loadVet("viewDiv")),
@@ -84,3 +87,23 @@ function App() {
 
 const root = createRoot(document.getElementById("app")!);
 root.render(<App />);
+function showPage(Page: () => ReactElement | null): void {
+  const content = document.getElementById("content");
+  const viewDiv = document.getElementById("viewDiv");
+  if (!content || !viewDiv) return;
+
+  // If a map view was active, clear it
+  viewDiv.style.display = "none";
+  viewDiv.innerHTML = "";
+
+  // Show React content area
+  content.style.display = "flex";
+
+  // Create root if needed and render the page component
+  if (!contentRoot) {
+    contentRoot = createRoot(content);
+  }
+  contentRoot.render(<Page />);
+}
+
+

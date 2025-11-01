@@ -73,7 +73,15 @@ export function Header() {
                         >
                             Domů
                         </Nav.Link>
-
+                        <Nav.Link
+                            href="#/resitelsky-tym"
+                            className="px-3 fw-medium"
+                            style={{
+                                color: "hsl(var(--foreground))",
+                            }}
+                        >
+                            Řešitelský tým
+                        </Nav.Link>
                         <NavDropdown
                             title="Mapy"
                             id="mapy-dropdown"

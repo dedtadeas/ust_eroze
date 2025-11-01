@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { MapCard } from "@/components/MapCard";
 import { ProjectDescription } from "@/components/ProjectDescription";
-import { TeamMember } from "@/components/TeamSection";
 
 const mapCards = [
     {
@@ -30,23 +29,7 @@ const mapCards = [
     }
 ];
 
-const teamMembers: TeamMember[] = [
-    {
-        name: "Jan Novák",
-        title: "Ph.D.",
-        position: "Vedoucí projektu",
-        photo: "images/team/novak.jpeg",
-        description: "Hlavní koordinátor projektu, specialista na vodní erozi"
-    },
-    {
-        name: "Eva Svobodová",
-        title: "Ph.D.",
-        position: "GIS specialista",
-        photo: "images/team/novak.jpeg",
-        description: "Tvorba mapových podkladů a prostorových analýz"
-    },
-    // Add more team members here
-];
+
 
 export function Home() {
     return (
@@ -89,7 +72,6 @@ export function Home() {
                     <ProjectDescription 
                         title="O projektu"
                         description="V rámci řešení projektu jsou vytvářeny podkladové prostorové geodatabáze pro zefektivnění rozhodovacích procesů Ústeckého kraje (resp. povodí Ohře a dolního Labe) a místních samospráv. Vytvořené mapové podklady jsou k dispozici na této webové mapové aplikaci. Tyto mapové podklady umožní efektivnější alokace finančních prostředků na adaptivní management zemědělské krajiny pro konkrétní lokality a pro konkrétní environmentální problémy dané lokality. Jedná se tedy o <b>prostorovou diferenciaci řešení různých typů adaptačních opatření v krajině</b> ústeckého kraje. Pro další zefektivnění a optimální vynaložení finančních prostředků je nutné vhodné <b>dimenzování</b> adaptivního managementu krajiny, resp. <b>počet a velikost navrhovaných adaptačních opatření.</b> Pro tyto účely budou řešené mapové podklady environmentálních rizik dimenzovány podle <b>pravděpodobnosti opakování za N let</b> (5, 10, 25, 50). Kromě dimenzování a prostorové diferenciace adaptivního managementu je klíčový také časový aspekt a to jak z hlediska <b>výskytu v určité části roku</b>, tak z hlediska predikce vývoje daného environmentálního rizika v následujících dekádách. Mapové podklady uvedených environmentálních rizik budou tedy vytvořeny pro jednotlivé měsíce a pro jednotlivé dekády do roku 2050. Tato <b>časo-prostorová diferenciace environmentálních rizik</b> umožní plně efektivní rozhodování o alokaci finančních prostředků a návrhu konkrétních typů adaptačních opatření, jejich dimenzování a jejich optimální rozložení v čase."
-                        teamMembers={teamMembers}
                     /> 
                 </div>
             </section>
