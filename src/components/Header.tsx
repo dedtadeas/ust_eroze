@@ -16,14 +16,19 @@ export function Header() {
                 <Navbar.Brand href="#/">
                     <div className="d-flex align-items-center gap-2">
                         <div
-                            className="d-flex align-items-center justify-content-center rounded"
+                            className="d-flex align-items-center justify-content-center rounded-circle"
                             style={{
-                                width: "40px",
-                                height: "40px",
-                                backgroundColor: "hsla(var(--primary), 0.1)",
+                                width: "180px",
+                                height: "64px",
+                                backgroundColor: "hsla(var(--primary), 0.08)",
                             }}
                         >
-                            <span style={{ fontSize: "1.5rem" }}>🗺️</span>
+                            <img
+                                src="images/ujep_logo.svg"
+                                alt="UJEP logo"
+                                loading="lazy"
+                                style={{ width: "100%", height: "100%", objectFit: "contain", padding: "6px" }}
+                            />
                         </div>
                         <div className="d-none d-sm-block">
                             <div
@@ -34,7 +39,7 @@ export function Header() {
                                     color: "hsl(var(--foreground))",
                                 }}
                             >
-                                Mapový portál eroze půdy
+                                Mapový portál pro management zemědělské krajiny
                             </div>
                             <div
                                 style={{
@@ -42,7 +47,7 @@ export function Header() {
                                     color: "hsl(var(--muted-foreground))",
                                 }}
                             >
-                                UJEP
+                                {/* UJEP */}
                             </div>
                         </div>
                     </div>
