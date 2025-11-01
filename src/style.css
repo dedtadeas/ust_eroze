@@ -47,6 +47,30 @@ html, body {
   color: hsl(var(--foreground));
 }
 
+/* Dark scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted)) hsl(var(--background));
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+*::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
 #app {
   display: flex;
   flex-direction: column;
