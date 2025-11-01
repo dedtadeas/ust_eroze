@@ -5,7 +5,7 @@ export function Home() {
             <section 
                 className="relative h-96 flex items-center justify-center bg-cover bg-center"
                 style={{
-                    backgroundImage: 'linear-gradient(rgba(20, 56, 127, 0.7), rgba(20, 56, 127, 0.7)), url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600")',
+                    backgroundImage: 'linear-gradient(rgba(20, 56, 127, 0.2), rgba(20, 56, 127, 0.2)), url("images/banner_photo_narrow.png")',
                 }}
             >
                 <div className="text-center px-4">
