@@ -1,39 +1,77 @@
+import { HeroSection } from "@/components/HeroSection";
+import { MapCard } from "@/components/MapCard";
+import { ProjectDescription } from "@/components/ProjectDescription";
+import { TeamMember } from "@/components/TeamSection";
+
+const mapCards = [
+    {
+        href: "#/mapy/vodni-eroze",
+        emoji: "💧",
+        title: "Vodní eroze",
+        description: "Analýzy a mapování eroze půdy působené deštěm a povrchovým odtokem"
+    },
+    {
+        href: "#/mapy/eroze-tani-snehu",
+        emoji: "❄️",
+        title: "Eroze táním sněhu",
+        description: "Analýzy a mapování tání sněhu a eroze půdy působené odtokem z tání sněhu"
+    },
+    {
+        href: "#/mapy/vetrna-eroze",
+        emoji: "🌬️",
+        title: "Větrná eroze",
+        description: "Analýzy a mapování eroze půdy působené větrem"
+    },
+    {
+        href: "#/mapy/retence",
+        emoji: "🌊",
+        title: "Retence",
+        description: "Podkladové mapy pro návrhy nízkonákladových retenčních prvků v krajině"
+    }
+];
+
+const teamMembers: TeamMember[] = [
+    {
+        name: "Jan Novák",
+        title: "Ph.D.",
+        position: "Vedoucí projektu",
+        photo: "images/team/novak.jpeg",
+        description: "Hlavní koordinátor projektu, specialista na vodní erozi"
+    },
+    {
+        name: "Eva Svobodová",
+        title: "Ph.D.",
+        position: "GIS specialista",
+        photo: "images/team/novak.jpeg",
+        description: "Tvorba mapových podkladů a prostorových analýz"
+    },
+    // Add more team members here
+];
+
 export function Home() {
     return (
         <div className="flex-1 overflow-y-auto">
-            {/* Hero Section */}
-            <section 
-                className="relative h-96 flex items-center justify-center bg-cover bg-center"
-                style={{
-                    backgroundImage: 'linear-gradient(rgba(20, 56, 127, 0.2), rgba(20, 56, 127, 0.2)), url("images/banner_photo_narrow.png")',
-                }}
-            >
-                <div className="text-center px-4">
-                    <h1 className="text-5xl font-bold text-white mb-4">
-                        Mapové výstupy projektu PERUN
-                    </h1>
-                    <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                        Interaktivní mapy a aplikace pro výzkum klimatických extrémů a eroze půdy
-                    </p>
-                </div>
-            </section>
+            <HeroSection 
+                title="Mapový portál pro management zemědělské krajiny Ústeckého kraje"
+                subtitle="Interaktivní mapy a aplikace pro efektivní management zemědělské krajiny Ústeckého kraje resp. povodí Ohře a dolního Labe."
+                backgroundImage="images/banner_photo_narrow.png"
+            />
 
             {/* Info Section */}
             <section className="py-16 bg-card">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-6 text-primary">
-                            O projektu
+                            Vítejte na webovém portálu projektu RUR
                         </h2>
                         <div className="space-y-4 text-lg text-foreground/80">
                             <p>
-                                <strong>Na těchto stránkách jsou k dispozici výstupy projektu PERUN 
-                                prezentované pomocí interaktivních map a mapových aplikací.</strong>
+                                <strong>Na těchto stránkách jsou k dispozici výstupy projektu RUR prezentované pomocí interaktivních map a mapových aplikací.</strong>
                             </p>
-                            <p className="text-base text-muted-foreground">
+                            {/* <p className="text-base text-muted-foreground">
                                 Pro správné zobrazení na mobilních zařízeních doporučujeme zapnout 
                                 v menu internetového prohlížeče možnost "Stránky pro počítač".
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
@@ -43,72 +81,16 @@ export function Home() {
             <section className="py-16 bg-background">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                        <a 
-                            href="#/mapy/vodni-eroze" 
-                            className="bg-card p-6 rounded-lg border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/20"
-                        >
-                            <div className="text-4xl mb-4">💧</div>
-                            <h3 className="text-xl font-semibold mb-2">Vodní eroze</h3>
-                            <p className="text-muted-foreground text-sm">Analýza a mapování vodní eroze půdy</p>
-                        </a>
-                        <a 
-                            href="#/mapy/eroze-tani-snehu" 
-                            className="bg-card p-6 rounded-lg border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/20"
-                        >
-                            <div className="text-4xl mb-4">❄️</div>
-                            <h3 className="text-xl font-semibold mb-2">Eroze táním sněhu</h3>
-                            <p className="text-muted-foreground text-sm">Monitoring eroze způsobené táním sněhu</p>
-                        </a>
-                        <a 
-                            href="#/mapy/vetrna-eroze" 
-                            className="bg-card p-6 rounded-lg border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/20"
-                        >
-                            <div className="text-4xl mb-4">🌬️</div>
-                            <h3 className="text-xl font-semibold mb-2">Větrná eroze</h3>
-                            <p className="text-muted-foreground text-sm">Studie větrné eroze a její prevence</p>
-                        </a>
-                        <a 
-                            href="#/mapy/retence" 
-                            className="bg-card p-6 rounded-lg border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/20"
-                        >
-                            <div className="text-4xl mb-4">🌊</div>
-                            <h3 className="text-xl font-semibold mb-2">Retence</h3>
-                            <p className="text-muted-foreground text-sm">Mapování retenční schopnosti krajiny</p>
-                        </a>
+                        {mapCards.map((card) => (
+                            <MapCard key={card.href} {...card} />
+                        ))}
                     </div>
 
-                    <div className="bg-card p-8 rounded-lg border">
-                        <h2 className="text-2xl font-bold mb-4">O projektu PERUN</h2>
-                        <p className="text-foreground/80 mb-6 leading-relaxed">
-                            Projekt PERUN je zaměřen na výzkum klimatických extrémů, sucha a důsledků 
-                            jeho prohlubování v České republice. Garantem projektu je Ministerstvo 
-                            životního prostředí a kromě ČHMÚ jsou řešiteli projektu Česká geologická 
-                            služba, Matematicko-fyzikální fakulta a Přírodovědecká fakulta Univerzity 
-                            Karlovy, Ústav fyziky atmosféry AV ČR, v. v. i., Ústav výzkumu globální 
-                            změny AV ČR, v. v. i., Výzkumný ústav vodohospodářský T. G. Masaryka, 
-                            v. v. i. a PROGEO, s. r. o.
-                        </p>
-                        <div className="flex items-center gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
-                                    <span className="text-2xl">🔗</span>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="text-sm text-muted-foreground mb-1">
-                                    Více podrobností o projektu je možné najít na webových stránkách:
-                                </p>
-                                <a 
-                                    href="https://www.perun-klima.cz/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="text-xl font-semibold text-primary hover:underline"
-                                >
-                                    www.perun-klima.cz
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <ProjectDescription 
+                        title="O projektu"
+                        description="V rámci řešení projektu jsou vytvářeny podkladové prostorové geodatabáze pro zefektivnění rozhodovacích procesů Ústeckého kraje (resp. povodí Ohře a dolního Labe) a místních samospráv. Vytvořené mapové podklady jsou k dispozici na této webové mapové aplikaci. Tyto mapové podklady umožní efektivnější alokace finančních prostředků na adaptivní management zemědělské krajiny pro konkrétní lokality a pro konkrétní environmentální problémy dané lokality. Jedná se tedy o prostorovou diferenciaci řešení různých typů adaptačních opatření v krajině ústeckého kraje. Pro další zefektivnění a optimální vynaložení finančních prostředků je nutné vhodné dimenzování adaptivního managementu krajiny, resp. počet a velikost navrhovaných adaptačních opatření. Pro tyto účely budou řešené mapové podklady environmentálních rizik dimenzovány podle pravděpodobnosti opakování za N let (5, 10, 25, 50). Kromě dimenzování a prostorové diferenciace adaptivního managementu je klíčový také časový aspekt a to jak z hlediska výskytu v určité části roku, tak z hlediska predikce vývoje daného environmentálního rizika v následujících dekádách. Mapové podklady uvedených environmentálních rizik budou tedy vytvořeny pro jednotlivé měsíce a pro jednotlivé dekády do roku 2050. Tato časo-prostorová diferenciace environmentálních rizik umožní plně efektivní rozhodování o alokaci finančních prostředků a návrhu konkrétních typů adaptačních opatření, jejich dimenzování a jejich optimální rozložení v čase."
+                        teamMembers={teamMembers}
+                    /> 
                 </div>
             </section>
         </div>
