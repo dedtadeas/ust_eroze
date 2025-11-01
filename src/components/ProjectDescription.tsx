@@ -11,9 +11,10 @@ export function ProjectDescription({ title, description, teamMembers }: ProjectD
         <>
             <div className="bg-card p-8 rounded-lg border">
                 <h2 className="text-2xl font-bold mb-4">{title}</h2>
-                <p className="text-foreground/80 leading-relaxed">
-                    {description}
-                </p>
+                <p 
+                    className="text-foreground/80 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: description }}
+                />
 
 
             {teamMembers && teamMembers.length > 0 && (
