@@ -77,7 +77,7 @@ export function Header() {
                         <NavDropdown
                             title="Mapy"
                             id="mapy-dropdown"
-                            className="px-3"
+                            className="px-3 fw-medium"
                             align="end" // ✅ ensures dropdown aligns to right side
                             menuVariant="dark"
                             style={{
