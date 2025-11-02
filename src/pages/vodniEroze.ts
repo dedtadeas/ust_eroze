@@ -3,6 +3,7 @@ import WebMap from "@arcgis/core/WebMap";
 import MapView from "@arcgis/core/views/MapView";
 import LayerList from "@arcgis/core/widgets/LayerList";
 import Search from "@arcgis/core/widgets/Search";
+import ScaleBar from "@arcgis/core/widgets/ScaleBar";
 
 export function loadMap(containerId: string) {
     const container = document.getElementById(containerId)!;
@@ -46,6 +47,12 @@ export function loadMap(containerId: string) {
         view: view
     });
     view.ui.add(layerList, "top-right");
+
+    const scaleBar = new ScaleBar({
+        view: view,
+        unit: "metric"
+    });
+    view.ui.add(scaleBar, "bottom-left");
 
     // Remove loading indicator when map is ready
     view.when(() => {
