@@ -2,20 +2,47 @@ import { TeamSection, TeamMember } from "../components/TeamSection";
 
 const teamMembers: TeamMember[] = [
     {
-        name: "Jan Novák",
-        title: "Ph.D.",
-        position: "Vedoucí projektu",
-        photo: "images/team/novak.jpeg",
-        description: "Hlavní koordinátor projektu, specialista na vodní erozi"
+        name: "Ing. Jiří Brychta",
+        title: "",
+        position: "Řešitel sekce adaptivního managementu krajiny",
+        photo: "images/team/brychta.png",
+        description: "Erodologie, hydrologie, aplikace GIS v životním prostředí"
     },
     {
-        name: "Eva Svobodová",
-        title: "Ph.D.",
+        name: "Ing. Tadeáš Děd",
+        title: "",
         position: "GIS specialista",
-        photo: "images/team/novak.jpeg",
-        description: "Tvorba mapových podkladů a prostorových analýz"
+        photo: "images/team/ded.jpeg",
+        description: "Prostorové analýzy, mapový portál, IT podpora"
     },
-    // Add more team members here
+    {
+        name: "Ing. Jakub Vosátka",
+        title: "",
+        position: "Vedoucí sekce Znalostní Hub",
+        photo: "images/team/vosatka.png",
+        description: "Ekonomika a ochrana životního prostředí"
+    },
+    {
+        name: "doc. Ing. Jan Pacina",
+        title: "",
+        position: "GIS specialista",
+        photo: "images/team/pacina.png",
+        description: "Morfometrické analýzy, geoinformační technologie, prostorové analýzy"
+    },
+    {
+        name: "Mgr. et Ing. Petr Novák",
+        title: "",
+        position: "Vedoucí Katedry geoinformatiky",
+        photo: "images/team/novak.png",
+        description: "Mapový portál, prostorové analýzy"
+    },
+    {
+        name: "Ing. Jan Popelka",
+        title: "",
+        position: "Statistik",
+        photo: "images/team/popelka.png",
+        description: "Statistické a geostatistické analýzy"
+    }
 ];
 
 export function Team() {
