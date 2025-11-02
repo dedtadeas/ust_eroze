@@ -31,9 +31,22 @@ export function loadMap(containerId: string) {
     const view = new MapView({
         map: webmap,
         container: containerId,
+
         ui: { components: ["attribution"] }
     });
-
+    view.scale = 1000000;
+    view.when(function () {
+        // MapView is now ready for display and can be used. Here we will
+        // use goTo to view a particular location at a given zoom level and center
+        view.goTo({
+            center: [ 13.467423108110502, 50.39653151335184],
+        });
+    })
+        .catch(function (err) {
+            // A rejected view indicates a fatal error making it unable to display.
+            // Use the errback function to handle when the view doesn't load properly
+            console.error("MapView rejected:", err);
+        });
     view.ui.move("zoom", "bottom-left");
 
     // 🔍 Search widget
