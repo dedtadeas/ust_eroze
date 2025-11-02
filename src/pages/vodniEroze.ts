@@ -1,10 +1,11 @@
 import "@arcgis/core/assets/esri/themes/dark/main.css";
-import Map from "@arcgis/core/Map";
+import WebMap from "@arcgis/core/WebMap";
 import MapView from "@arcgis/core/views/MapView";
+import LayerList from "@arcgis/core/widgets/LayerList";
 
 export function loadMap(containerId: string) {
     const container = document.getElementById(containerId)!;
-    
+
     // Show loading indicator
     container.innerHTML = `
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; background: hsl(0 0% 10%);">
@@ -16,18 +17,23 @@ export function loadMap(containerId: string) {
             </div>
         </div>
     `;
-    
-    const map = new Map({
-        basemap: "topo-vector"
+
+    const webmap = new WebMap({
+        portalItem: {
+            id: "a246009483044bdbaf84cf21b8b45fb1"
+        }
     });
 
     const view = new MapView({
-        map: map,
-        container: containerId,
-        center: [14.4208, 50.0880], // Prague coordinates
-        zoom: 8
+        map: webmap,
+        container: containerId
     });
-    
+
+    const layerList = new LayerList({
+        view: view
+    });
+    view.ui.add(layerList, "top-right");
+
     // Remove loading indicator when map is ready
     view.when(() => {
         container.querySelector('.spinner-border')?.parentElement?.parentElement?.remove();
