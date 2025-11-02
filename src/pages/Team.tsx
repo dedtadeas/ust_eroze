@@ -9,7 +9,7 @@ const teamMembers: TeamMember[] = [
         description: "Erodologie, hydrologie, aplikace GIS v životním prostředí"
     },
     {
-        name: "Ing. Tadeáš Děd",
+        name: "Mgr. Tadeáš Děd",
         title: "",
         position: "GIS specialista",
         photo: "images/team/ded.jpeg",
