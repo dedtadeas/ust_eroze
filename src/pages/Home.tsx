@@ -49,7 +49,7 @@ export function Home() {
                         </h2>
                         <div className="space-y-4 text-lg text-foreground/80">
                             <p>
-                                <strong>Na těchto stránkách jsou k dispozici výstupy projektu RUR prezentované pomocí interaktivních map a mapových aplikací.</strong>
+                                <strong>Na těchto stránkách jsou k dispozici výstupy projektu RUR - sekce adaptivního managementu krajiny, prezentované pomocí interaktivních map a mapových aplikací.</strong>
                             </p>
                             {/* <p className="text-base text-muted-foreground">
                                 Pro správné zobrazení na mobilních zařízeních doporučujeme zapnout 
