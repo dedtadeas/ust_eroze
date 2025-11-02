@@ -27,8 +27,13 @@ export function loadMap(containerId: string) {
 
     const view = new MapView({
         map: webmap,
-        container: containerId
+        container: containerId,
+        ui: {
+            components: ["attribution"]
+        }
     });
+
+    view.ui.move("zoom", "bottom-left");
 
     const search = new Search({
         view: view,
