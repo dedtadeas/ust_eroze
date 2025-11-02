@@ -1,11 +1,10 @@
 import "@arcgis/core/assets/esri/themes/dark/main.css";
-import WebMap from "@arcgis/core/WebMap";
+import Map from "@arcgis/core/Map";
 import MapView from "@arcgis/core/views/MapView";
-import LayerList from "@arcgis/core/widgets/LayerList";
 
 export function loadMap(containerId: string) {
     const container = document.getElementById(containerId)!;
-    
+
     // Show loading indicator
     container.innerHTML = `
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; background: hsl(0 0% 10%);">
@@ -17,25 +16,48 @@ export function loadMap(containerId: string) {
             </div>
         </div>
     `;
-    
-    const webmap = new WebMap({
-        portalItem: {
-            id: "59bc4eb4eaee4fc48931611029997ff9"
+
+    const map = new Map({
+        basemap: "streets-vector"
+    });
+
+
+    const view = new MapView({
+        map: map,
+        container: containerId,
+        center: [14.4208, 50.0880], // Prague coordinates
+        zoom: 8,
+        ui: {
+            components: ["attribution"]
         }
     });
 
-    const view = new MapView({
-        map: webmap,
-        container: containerId
-    });
+    view.ui.move("zoom", "bottom-left");
 
-    const layerList = new LayerList({
-        view: view
-    });
-    view.ui.add(layerList, "top-right");
-    
     // Remove loading indicator when map is ready
     view.when(() => {
         container.querySelector('.spinner-border')?.parentElement?.parentElement?.remove();
+
+        // Add "Map in preparation" banner
+        const banner = document.createElement('div');
+        banner.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: hsl(0 0% 15% / 0.95);
+            border: 2px solid hsl(200 100% 60%);
+            border-radius: 8px;
+            padding: 1.5rem 2.5rem;
+            text-align: center;
+            color: hsl(200 100% 60%);
+            font-size: 1.25rem;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            z-index: 1000;
+        `;
+        banner.innerHTML = '🚧 Mapa je v přípravě 🚧';
+        container.appendChild(banner);
     });
 }
