@@ -28,7 +28,7 @@ export function Team() {
                             Řešitelský tým
                         </h1>
                         <p className="text-lg text-muted-foreground">
-                            Odborníci pracující na projektu RUR
+                            Odborníci pracující na projektu RUR - sekce adaptivní management krajiny
                         </p>
                     </div>
 
