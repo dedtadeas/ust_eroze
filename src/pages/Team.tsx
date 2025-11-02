@@ -2,7 +2,7 @@ import { TeamSection, TeamMember } from "../components/TeamSection";
 
 const teamMembers: TeamMember[] = [
     {
-        name: "Ing. Jiří Brychta",
+        name: "Ing. Jiří Brychta,Ph.D.",
         title: "",
         position: "Řešitel sekce adaptivního managementu krajiny",
         photo: "images/team/brychta.png",
@@ -16,14 +16,14 @@ const teamMembers: TeamMember[] = [
         description: "Prostorové analýzy, mapový portál, IT podpora"
     },
     {
-        name: "Ing. Jakub Vosátka",
+        name: "Ing. Jakub Vosátka,Ph.D.",
         title: "",
         position: "Vedoucí sekce Znalostní Hub",
         photo: "images/team/vosatka.png",
         description: "Ekonomika a ochrana životního prostředí"
     },
     {
-        name: "doc. Ing. Jan Pacina",
+        name: "doc. Ing. Jan Pacina,Ph.D.",
         title: "",
         position: "GIS specialista",
         photo: "images/team/pacina.png",
@@ -37,7 +37,7 @@ const teamMembers: TeamMember[] = [
         description: "Mapový portál, prostorové analýzy"
     },
     {
-        name: "Ing. Jan Popelka",
+        name: "Ing. Jan Popelka, Ph.D.",
         title: "",
         position: "Statistik",
         photo: "images/team/popelka.png",
