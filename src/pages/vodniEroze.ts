@@ -2,6 +2,7 @@ import "@arcgis/core/assets/esri/themes/dark/main.css";
 import WebMap from "@arcgis/core/WebMap";
 import MapView from "@arcgis/core/views/MapView";
 import LayerList from "@arcgis/core/widgets/LayerList";
+import Search from "@arcgis/core/widgets/Search";
 
 export function loadMap(containerId: string) {
     const container = document.getElementById(containerId)!;
@@ -28,6 +29,13 @@ export function loadMap(containerId: string) {
         map: webmap,
         container: containerId
     });
+
+    const search = new Search({
+        view: view,
+        includeDefaultSources: true,
+        locationEnabled: false
+    });
+    view.ui.add(search, "top-left");
 
     const layerList = new LayerList({
         view: view
