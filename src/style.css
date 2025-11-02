@@ -19,7 +19,7 @@
   --card-foreground: 0 0% 90%;
   --popover: 0 0% 15%;
   --popover-foreground: 0 0% 90%;
-  --primary: 200 100% 60%;  /* Vibrant blue */
+  --primary: 0.5733 0.144564 245.0895;
   --primary-foreground: 0 0% 100%;
   --secondary: 0 0% 25%;  /* Subtle gray */
   --secondary-foreground: 0 0% 90%;
@@ -31,12 +31,20 @@
   --destructive-foreground: 0 0% 100%;
   --border: 0 0% 22%;
   --input: 0 0% 22%;
-  --ring: 200 100% 60%;
-  --chart-1: 200 100% 60%;
+  --ring: 0.5733 0.144564 245.0895;
+  --chart-1: 0.5733 0.144564 245.0895;
   --chart-2: 0 0% 40%;
   --chart-3: 0 0% 50%;
   --chart-4: 0 0% 35%;
   --chart-5: 0 0% 28%;
+  
+  /* Bootstrap primary color override */
+  --bs-primary: #007ec7;
+  --bs-primary-rgb: 0, 126, 199;
+  --bs-link-color: #007ec7;
+  --bs-link-color-rgb: 0, 126, 199;
+  --bs-link-hover-color: #006bb0;
+  --bs-link-hover-color-rgb: 0, 107, 176;
 }
 
 html, body {
@@ -68,7 +76,7 @@ html, body {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary));
+  background: oklch(var(--primary));
 }
 
 #app {
@@ -203,8 +211,8 @@ button:focus-visible {
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.5733 0.144564 245.0895);
+  --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -214,15 +222,15 @@ button:focus-visible {
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
+  --ring: oklch(0.5733 0.144564 245.0895);
+  --chart-1: oklch(0.5733 0.144564 245.0895);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.5733 0.144564 245.0895);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
@@ -247,7 +255,7 @@ button:focus-visible {
   border-radius: var(--radius);
   min-width: 12rem;
   padding: 0.25rem 0;
-  box-shadow: 0 8px 24px hsla(var(--primary), 0.2);
+  box-shadow: 0 8px 24px oklch(var(--primary) / 0.2);
   z-index: 2000;
   right: 0 !important;
   left: auto !important;
@@ -263,8 +271,8 @@ button:focus-visible {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: hsla(var(--primary), 0.15) !important;
-  color: hsl(var(--primary)) !important;
+  background-color: oklch(var(--primary) / 0.15) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 /* === Navbar === */
@@ -281,7 +289,7 @@ button:focus-visible {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
 .navbar .nav-link.active {
-  color: hsl(var(--primary)) !important;
+  color: oklch(var(--primary)) !important;
 }
 
 /* Fix dropdown going off-screen on small widths */
